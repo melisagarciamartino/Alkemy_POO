@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<table class="table table-hover">
+   <thead>
+     <tr>
+       <th scope="col">ID</th>
+       <th scope="col">Nombre</th>
+       <th scope="col">Precio</th>
+       <th scope="col">Stock Actual</th>
+       <th scope="col">Proveedor</th>
+     </tr>
+   </thead>
+
+   <tbody>
+     
+     <tr>
+       <td>{{productos.id}}</td>
+       <td>{{productos.nombre}}</td>
+       <td>{{productos.precio}}</td>
+       <td>{{productos.stock_actual}}</td>
+       <td>{{productos.proveedor}}</td>
+      </tr>
+   </tbody>
+</table>
+
+{% endblock content %}

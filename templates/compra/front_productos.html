@@ -1,0 +1,78 @@
+{% extends "base.html" %} 
+
+
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/front_productos.css' %}">
+
+<div>
+<form class="d-flex" role="search" method = "post" action = "{% url 'compra:busqueda_producto' %}"  >
+  <input class="form-control me-2" type="search" placeholder="Busque su producto" aria-label="Search" name="buscar">
+  {% csrf_token %} 
+  <button class="btn btn-outline-success" type="submit">Buscar</button>
+</form> 
+</div>
+
+<th> 
+  <div class = "cantidad">  Total: {{productos.count}}</div>
+</th>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Imagen</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Stock Actual</th>
+        <th scope="col">Proveedor</th>
+      </tr>
+    </thead>
+
+    
+    <tbody>
+        {% for producto in productos %}
+      <tr>
+       
+        <th scope="row">
+           <a href = "{% url 'compra:productos_por_id' producto.id %}">
+            <img src = "{{producto.foto.url}}" width ="50px" />
+           </a>
+        </th>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.stock_actual}}</td>
+        <td>
+            {{producto.proveedor}}
+        </td>
+        <td> 
+          <a href = "{% url 'compra:producto_modificar' producto.pk %}">
+            <img src = "{% static 'img/modificar1.png' %}" alt = "MODIFICAR" width = "50px" />
+          </a>
+        </td>
+        
+        <td>
+          <a href = "{% url 'compra:producto_eliminar' producto.pk %}">
+            <img src = "{% static 'img/delete.avif' %}" alt = "ELIMINAR" width = "50px" />
+          </a>
+        </td>
+
+        
+      </tr>
+        {% endfor %}
+
+ 
+    </tbody>
+  </table>
+
+  <th> 
+    <a class = "agregar" href = "{% url 'compra:producto_crear' %}"> Agregar Producto
+    </a>
+    <a href = "{% url 'compra:producto_crear' %}">
+    <img class = "agregar_btn" src = "{% static 'img/agregar.avif' %}" alt = "AGREGAR" width = "50px"/>
+    </a>
+  </th>
+
+{% endblock content %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+use static
+
+{% block content %}
+
+
+<div class="alert alert-success" role="alert">
+<form method="post">
+
+    {% csrf_token %}
+     
+    <div>Estas seguro de borrar el producto {{producto.nombre}}?</div>
+     
+<input type="submit" class ="btn btn-success" value="Si">
+
+</form>
+</div>
+
+
+{% endblock %}

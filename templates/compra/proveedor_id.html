@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<table class="table table-hover">
+   <thead>
+     <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">DNI</th>
+     </tr>
+   </thead>
+
+   <tbody>
+     
+     <tr>
+       <td>{{proveedores.id}}</td>
+       <td>{{proveedores.nombre}}</td>
+       <td>{{proveedores.apellido}}</td>
+       <td>{{proveedores.dni}}</td>
+      </tr>
+   </tbody>
+</table>
+
+{% endblock content %}

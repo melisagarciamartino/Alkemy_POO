@@ -1,0 +1,30 @@
+.cantidad{
+    display: flex;
+    align-items: flex-end;
+}
+
+.cantidad_productos{
+    background-color: hsl(133, 94%, 25%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 0px;
+    font-family: Arial;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px 50px 50px 50px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px rgb(109, 106, 106);
+}
+
+.cantidad_proveedores{
+    background-color: hsl(133, 94%, 25%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 0px;
+    font-family: Arial;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 50px 50px 50px 50px;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px rgb(109, 106, 106);
+}

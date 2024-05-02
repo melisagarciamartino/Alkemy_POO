@@ -1,0 +1,17 @@
+{% extends "base.html" %}  
+
+use static
+
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+<form method="post" enctype="multipart/form-data">
+    
+    {% csrf_token %} 
+    
+    {{ form.as_p }}
+    <input type="submit" class ="btn btn-success" value="Guardar">
+</form>
+</div>
+
+{% endblock %}
