@@ -21,30 +21,3 @@ Dentro de src se encuentran las siguientes carpetas:
 Se encuentran en el archivo requirements.txt
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-
-## Demo
-
-Insert gif or link to demo
-
-
