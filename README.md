@@ -1,7 +1,7 @@
 
 # Stock Control
 
-Se trata de un proyecto que contiene la aplicacion web "compra" con la cual se pueden crear, modificar, borrar, leer y listar productos y proveedores. Ademas se pueden ver los productos que estan asociados a un proveedor en especìfico.
+Se trata de un proyecto que contiene la aplicacion web "compra" con la cual se pueden crear, modificar, borrar, leer y listar productos y proveedores. Ademas se pueden ver los productos que estan asociados a un proveedor en específico.
 
 ## Framework
 
