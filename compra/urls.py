@@ -19,7 +19,8 @@ from .views import (
 app_name = "compra"
 
 urlpatterns = [ 
-               path("inicio/", primera_vista , name = "inicio"),
+               
+               path("", primera_vista , name = "inicio"),
                path("productos/", lista_productos , name = "listado_productos"),
                path("producto_id/<int:id>/" , productos_por_id , name = "productos_por_id"),
                path("buscar_producto" , buscar_producto, name = "busqueda_producto"),
